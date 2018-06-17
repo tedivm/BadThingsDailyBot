@@ -1,0 +1,6 @@
+Beaker==1.10.0
+click==6.7
+Flask==1.0.2
+PyYAML==3.12
+python-twitter=3.4.2
+slackclient=1.2.1
