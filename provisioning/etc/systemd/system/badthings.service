@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn instance to serve badthings
+After=network.target
+
+[Service]
+User=badthings
+Group=badthings
+WorkingDirectory=/opt/badthings
+Environment="PATH=/opt/badthings/env/bin"
+Environment="SETTINGS=/opt/badthings/settings"
+Environment="FLASK_APP=/opt/badthings/badthings/badthings.py"
+ExecStart=/opt/badthings/env/bin/gunicorn --workers 3 --bind unix:/tmp/badthings.sock -m 000 badthings:app
+
+[Install]
+WantedBy=multi-user.target
