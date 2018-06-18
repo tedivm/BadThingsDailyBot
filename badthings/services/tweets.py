@@ -1,4 +1,5 @@
 from badthings import app
+from badthings.services.cache import cache
 import random
 import twitter
 
@@ -16,7 +17,7 @@ def get_random_tweet():
     random_status = random.choice(badtweets)
     return 'https://twitter.com/badthingsdaily/status/%s' % (random_status['id'])
 
-
+@cache.cache()
 def get_all_tweets():
     tweets = []
     max_id = None
