@@ -6,7 +6,7 @@ from badthings.services import tweets
 
 import badthings.cli.tweets
 
-import badthings.routes.auth
+import badthings.routes.slack
 import badthings.routes.slash
 
 @app.route('/')
