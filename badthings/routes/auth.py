@@ -5,7 +5,7 @@ AUTH_BUTTON='<a href="%s"><img alt="Add to Slack" height="40" width="139" src="h
 
 @app.route("/slack/install", methods=["GET"])
 def pre_install():
-    return AUTH_BUTTON % (slack.get_auth_link())
+    return redirect(slack.get_auth_link(), code=307)
 
 
 @app.route("/slack/successful_install")
