@@ -8,11 +8,6 @@ def slash_single():
     scenario = tweets.get_random_tweet()
     response = {
         'response_type': 'in_channel',
-        'text': scenario,
-        'attachments': [
-            {
-                'text': scenario
-            }
-        ]
+        'text': scenario
     }
     return jsonify(response)

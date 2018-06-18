@@ -1,10 +1,12 @@
 import click
 from flask import Flask, session, redirect, url_for, request
 from badthings import app
-import badthings.cli.tweets
-import badthings.routes.slash
 from badthings.services import tweets
 
+import badthings.cli.tweets
+
+import badthings.routes.auth
+import badthings.routes.slash
 
 @app.route('/')
 def index():
