@@ -7,9 +7,9 @@ User=badthings
 Group=badthings
 WorkingDirectory=/opt/badthings
 Environment="PATH=/opt/badthings/env/bin"
-Environment="SETTINGS=/opt/badthings/settings"
+Environment="SETTINGS=/opt/badthings/.settings.yaml"
 Environment="FLASK_APP=/opt/badthings/badthings/badthings.py"
-ExecStart=/opt/badthings/env/bin/gunicorn --workers 3 --bind unix:/tmp/badthings.sock -m 000 badthings:app
+ExecStart=/opt/badthings/env/bin/gunicorn --workers 3 badthings.badthings:app
 
 [Install]
 WantedBy=multi-user.target
