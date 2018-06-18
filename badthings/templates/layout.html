@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Bad Things Daily</title>
+<meta property="og:title" content="Bad Things Daily" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tabletop Scenarios to Slack" />
+<meta property="og:description" content="Tabletop Scenarios to Slack" />
+<meta property="og:site_name" content="Bad Things Daily" />
+<!-- End Jekyll SEO tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="/logo.png">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Bad Things Daily</h1>
+      <h2 class="project-tagline">Tabletop Scenarios to Slack.</h2>
+        {{ button|safe }}
+    </section>
+
+    <section class="main-content">
+
+      {% block content %}
+      {% endblock %}
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://badthings.tedivm.com">badthings.tedivm.com</a> is maintained by <a href="https://blog.tedivm.com">Robert Hafner</a>.</span>
+        <span class="site-footer-credits">This page was generated using a theme from <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+
+    </section>
+
+
+  </body>
+</html>

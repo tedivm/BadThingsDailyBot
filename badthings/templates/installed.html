@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+
+Thank you for installing Bad Things on Slack!
+
+This Slack Application bridges the twitter account and your Slack team by adding a <code class="highlighter-rouge">/badthings</code> slash code to your team. When run this command returns a random scenario from <a href="https://twitter.com/badthingsdaily">@BadThingsDaily</a>
+
+<img src="{{url_for('static', filename='images/slack_example.png')}}">
+
+{% endblock %}

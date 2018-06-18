@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<img src="{{url_for('static', filename='images/slack_example.png')}}">
+
+<p>Running <a href="https://www.ready.gov/business/testing/exercises">Tabletop Exercises</a> is an important aspect of any security policy, and may even be required by various compliancy programs.</p>
+
+<p>One great resource for table top exercises is the <a href="https://twitter.com/badthingsdaily?lang=en">Bad Things Daily twitter account</a>. This straight forward account publishes new scenarios roughly every day.</p>
+
+<p>This Slack Application bridges the twitter account and your Slack team by adding a <code class="highlighter-rouge">/badthings</code> slash code to your team. When run this command returns a random scenario from <a href="https://twitter.com/badthingsdaily">@BadThingsDaily</a></p>
+
+<h2>Privacy Policy</h2>
+
+<p>This application only does one thing- it listens for "slash" commands sent by the Slack server and it responds with a scenario. It does not have, nor does it need, permission to read any messages on your Slack network.</p>
+
+{% endblock %}

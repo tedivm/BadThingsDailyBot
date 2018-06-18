@@ -29,3 +29,4 @@ def post_install():
     client_secret=client_secret,
     code=auth_code
   )
+
