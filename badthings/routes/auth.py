@@ -10,7 +10,7 @@ def pre_install():
 
 @app.route("/slack/successful_install")
 def sucessful_install():
-    return 'Install Successfull!'
+    return render_template('installed.html')
 
 
 @app.route("/slack/finish_install", methods=["GET", "POST"])
