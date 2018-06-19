@@ -10,11 +10,6 @@ def pre_install():
 
 @app.route("/slack/successful_install")
 def sucessful_install():
-    return render_template('installed.html')
-
-
-@app.route("/slack/finish_install", methods=["GET", "POST"])
-def post_install():
 
   # Retrieve the auth code from the request params
   auth_code = request.args['code']
@@ -25,8 +20,9 @@ def post_install():
   # Request the auth tokens from Slack
   auth_response = sc.api_call(
     "oauth.access",
-    client_id=client_id,
-    client_secret=client_secret,
+    client_id=app.config['slack']['client_id'],
+    client_secret=app.config['slack']['client_secret'],
     code=auth_code
   )
+  return render_template('installed.html')
 
