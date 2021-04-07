@@ -2,6 +2,6 @@ Beaker==1.10.0
 click==6.7
 Flask==1.0.2
 gunicorn==19.8.1
-PyYAML==3.12
+PyYAML==5.4
 python-twitter==3.4.2
 slackclient==1.2.1
